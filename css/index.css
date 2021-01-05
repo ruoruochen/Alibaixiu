@@ -1,0 +1,190 @@
+/* 修改container的宽度为1280 根据设计稿走 */
+@media screen and (min-width:1280px){
+    .container{
+        width: 1280px;
+    }
+}
+
+*{
+    margin: 0 ;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,a:link{
+    text-decoration: none;
+}
+
+/* header */
+header{
+    padding-left: 0px !important;
+}
+
+.logo{
+    background-color: #429ad9;
+}
+
+.logo img{
+    display: block;
+    /* width: 100%; */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 进入超小屏幕下，隐藏logo图片，显示文字 */
+
+/* 准备一个盒子，平时隐藏，超小屏幕显示 */
+.logo span{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.nav{
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav a{
+    display: block;
+    padding-left: 30px;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* 进入小屏幕/超小屏幕，li浮动，每个20% 文字变小 */
+@media screen and (max-width:991px){
+    .nav li{
+        float: left;
+        width: 20%;
+    }
+
+    article{
+        margin-top: 10px;
+    }
+}
+
+/* 当处于超小屏幕，第一个li100%，其他50% */
+@media screen and (max-width:767px){
+    .nav li a{
+        font-size: 14px;
+        padding-left: 5px !important;
+    }
+
+    .news li:nth-child(1){
+        width: 100% !important;
+    }
+
+    .news li{
+        width: 50% !important;
+    }
+    
+    .publish h3{
+        font-size: 16px;
+    }
+}
+
+
+.nav a:hover{
+    background-color: #fff;
+    color: #333;
+}
+
+.nav a::before{
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+/* article */
+
+/* 在bootstrap加类名clearfix即可清除浮动 */
+/* .news{
+    overflow: hidden;
+    clear: both;
+} */
+
+.news li{
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+
+.news li:nth-child(1){
+    width: 50%;
+    height: 266px;
+}
+
+.news li:nth-child(n+2){
+    height: 128px;
+}
+
+
+.news a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.news a img{
+    width: 100%;
+    height: 100%;
+}
+
+.news a p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 7px;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.publish {
+    border-top: 1px solid #ccc;
+}
+
+.pic img{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.publish .row{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* aside */
+.banner img{
+    width: 100%;
+}
+
+.hot{
+    display: block;
+    margin-top: 20px;
+    padding: 3px 10px 20px;
+    border: 1px solid #ccc;
+}
+
+.hot span{
+    border-radius: 0;
+    margin-bottom: 8px;
+}
